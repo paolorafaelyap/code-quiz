@@ -1,5 +1,6 @@
-// first create a functioning start button
-// when the start button is pressed, timer should start
+// first create a functioning start button (done)
+// when the start button is pressed, index takes us to the page with timer (done)
+// when new page opens, timer immediately should start
 // while timer is on, page should ask you questions
 // if input is correct, display message will say 'correct'
 // if input is incorrect, display message will say 'wrong'
