@@ -4,24 +4,25 @@
 // another objective is to make sure timer doesn't restart when refreshing
 
 //function for countdown timer
-var countDownTime = 76;
 
+var countDownTime = 76
 // Update the count down every 1 second
 var x = setInterval(function() {
 
-  // Get today's date and time
-  var now = 1;
+  if (countDownTime > 0){// Get today's date and time
+ 
+    countDownTime--;
 
   // Find the distance between now and the count down date
-  var seconds = countDownTime - now;
-
   
+  }
 
+  document.getElementById("countdown").innerHTML = countDownTime + "s ";
   // Display the result in the element with id="demo"
-  document.getElementById("countdown").innerHTML = seconds + "s ";
+  //document.getElementById("countdown").innerHTML = seconds + "s ";
 
   // If the count down is finished, write some text
-  if (seconds < 0) {
+  if (countDownTime < 0) {
     clearInterval(x);
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
