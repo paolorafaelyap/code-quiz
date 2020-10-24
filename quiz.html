@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Time</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style-2.css">
 </head>
 <body>
-    
+    <div class="card">
+        <header>
+            <h3 class="timer">75</h3>
+        </header>
+     <div class="card-body">
+       <div id="question">  
+            <h1 class="question-1">Who had the high ground over Anakin?</h1>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="jarJar" id="jarJarBinks" value="1A">
+            <label class="form-check-label" for="jarJarBinks">
+              A. Jar-Jar Binks
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="Shaquille" id="Shaq" value="1B">
+            <label class="form-check-label" for="Shaq">
+              B. Shaquille O'Neal
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="obiWan" id="kenobi" value="1C">
+            <label class="form-check-label" for="kenobi">
+              C. Obi-Wan Kenobi
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="xWing" id="x-wing" value="1D">
+            <label class="form-check-label" for="x-wing">
+              D. X-Wing @Alicousness
+            </label>
+        </div>
+        </div>
+     </div>
+     <div class="card">
+         <div id="card-footer">
+            <div class="row">
+                <button type="button" class="btn btn-primary btn-sm" id="next">Next Question</button>
+            </div>
+         </div>
+     </div>
+    </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>
