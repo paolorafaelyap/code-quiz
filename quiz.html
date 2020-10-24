@@ -13,36 +13,25 @@
             <h3 class="timer">75</h3>
         </header>
      <div class="card-body">
-       <div id="question">  
-            <h1 class="question-1">Who had the high ground over Anakin?</h1>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="jarJar" id="jarJarBinks" value="1A">
-            <label class="form-check-label" for="jarJarBinks">
-              A. Jar-Jar Binks
-            </label>
+       <div id="trivia">  
+        <main>  
+            <!--This will be used for questions-->
+            <div class="question">
+                <p id="text"></p>
+            </div> 
+        </main>  
+        <!--These will be the choices-->
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col-lg-6">
+                    <button type="button" id="option1" class="btn btn-primary"></button>
+                    <button type="button" id="option2" class="btn btn-primary"></button>
+                    <button type="button" id="option3" class="btn btn-primary"></button>
+                    <button type="button" id="option4" class="btn btn-primary"></button>    
+                </div>
+            </div>
         </div>
-        <br>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="Shaquille" id="Shaq" value="1B">
-            <label class="form-check-label" for="Shaq">
-              B. Shaquille O'Neal
-            </label>
-        </div>
-        <br>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="obiWan" id="kenobi" value="1C">
-            <label class="form-check-label" for="kenobi">
-              C. Obi-Wan Kenobi
-            </label>
-        </div>
-        <br>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="xWing" id="x-wing" value="1D">
-            <label class="form-check-label" for="x-wing">
-              D. X-Wing @Alicousness
-            </label>
-        </div>
-        </div>
+       </div>
      </div>
      <div class="card">
          <div id="card-footer">
@@ -53,6 +42,7 @@
      </div>
     </div>
 </body>
+<script src="./assets/quiz.js"></script> <!--link to allow for interactive page-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
