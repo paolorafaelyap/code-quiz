@@ -13,7 +13,7 @@ var x = setInterval(function() {
     countDownTime--;
   }
 // Displays the timer on the page 
-  document.getElementById("countdown").innerHTML = countDownTime + "s ";
+  document.getElementById("countdown").innerHTML = countDownTime + " seconds";
  
 
   // If the count down is finished, write some text to show that time has expired.
@@ -23,25 +23,112 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-//setting a constant that holds an array for all multiple choice questions
-const quiz = [
-    {
-        question: "Who had the high ground over Anakin?",
-        choices:{
-            a: "Jar-Jar Binks", b: "Shaquille O'Neal", 
-            c: "Obi-Wan Kenobi", d: "X-Wing @Aliciousness"},
-        correctAnswer: ("c")
-    },
-    {
-        question: "Who was born on the planet Titan?",
-        choices:{
-            a: "Thanos", b: "Jon Snow", c: "Ned Flanders", d:"Hercules"},
-        correctAnswer: ("a")
-    },
-    {
-        question: "Who's awesome?",
-        choices: {
-            a: "not me", b: "not you", c: "not I", d: "me"},
-        correctAnswer: ("d")
-    }
-];
+// button variables
+
+let question = document.getElementById("text");
+let option1 = document.getElementById("option1");
+let option2 = document.getElementById("option2");
+let option3 = document.getElementById("option3");
+let option4 = document.getElementById("option4");
+
+
+
+
+firstQuestion()
+
+function firstQuestion()
+{
+  question.appendChild(document.createTextNode("Who had the high ground over Anakin?"));
+  option1.appendChild(document.createTextNode("Jar-Jar Binks"));
+  option2.appendChild(document.createTextNode("Shaquille O'Neal"));
+  option3.appendChild(document.createTextNode("Obi-Wan Kenobi"));
+  option4.appendChild(document.createTextNode("X-Wing @Aliciousness"));
+
+ option1.addEventListener("click", function(){
+   
+  
+  secondQuestion();
+ });
+ 
+ option2.addEventListener("click", function(){
+   
+  secondQuestion();
+ });
+
+ option3.addEventListener("click", function(){
+   
+  secondQuestion();
+ });
+
+ option4.addEventListener("click", function(){
+   
+  secondQuestion();
+ });
+
+}
+
+
+function secondQuestion()
+{
+  question.appendChild(document.createTextNode("Who was born on the planet Titan?"));
+  option1.appendChild(document.createTextNode("Thanos"));
+  option2.appendChild(document.createTextNode("Jon Snow"));
+  option3.appendChild(document.createTextNode("Ned Flanders"));
+  option4.appendChild(document.createTextNode("Hercules"));
+
+  option1.addEventListener("click", function(){
+    
+    thirdQuestion();
+  });
+  
+  option2.addEventListener("click", function(){
+  
+    thirdQuestion();
+  });
+ 
+  option3.addEventListener("click", function(){
+    
+    thirdQuestion();
+  });
+ 
+  option4.addEventListener("click", function(){
+    
+    thirdQuestion();
+  });
+};
+
+function thirdQuestion(){
+  question.appendChild(document.createTextNode("Who's awesome?"));
+  option1.appendChild(document.createTextNode("not me"));
+  option2.appendChild(document.createTextNode("not you"));
+  option3.appendChild(document.createTextNode("not I"));
+  option4.appendChild(document.createTextNode("me"));
+
+  option1.addEventListener("click", function(){
+    
+  });
+  
+  option2.addEventListener("click", function(){
+    
+  });
+ 
+  option3.addEventListener("click", function(){
+    
+  });
+ 
+  option4.addEventListener("click", function(){
+    
+  });
+} 
+
+    //},
+    //{
+     //   question: "Who's awesome?",
+      //  choices: {
+       //     a: "not me", b: "not you", c: "not I", d: "me"},
+       // correctAnswer: ("d")
+   // }
+ // ]
+    
+
+// display the questions on the screen   

@@ -10,6 +10,7 @@
 
 .timer{
     right: 20%;
+    text-align: right;
 }
 
 .trivia{
@@ -35,4 +36,10 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-left: auto;
     margin-right: auto; 
+}
+
+#text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
