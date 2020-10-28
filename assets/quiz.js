@@ -78,130 +78,41 @@ function renderQuestion()
   choiceC.innerHTML = "<button>" + q.choiceC + "</button>";
   choiceD.innerHTML = "<button>" + q.choiceD + "</button>";
 
-  /*if (currentQ < lastQIndex)
-  {
-    currentQ++;
-    renderQuestion();
-  }*/
-  check();
+  nextQuestion();
+
 }
 
 renderQuestion();
 
-function check(answer){
-  if(answer == questions[currentQ].correct)
-  {
-    score=score + 5;
-  }
+//code to get next question
 
-  else
+function nextQuestion(){
+  choiceA.addEventListener("click", function()
   {
-    score = 0;
-  }
-  if (currentQ < lastQIndex)
+      currentQ ++;
+      renderQuestion();
+  })
+
+  choiceB.addEventListener("click", function()
   {
-    currentQ++;
-    renderQuestion();
-  }
+      currentQ ++;
+      renderQuestion();
+  })
+  
+  choiceC.addEventListener("click", function()
+  {
+      currentQ ++;
+      renderQuestion();
+  })
+
+  choiceD.addEventListener("click", function()
+  {
+      currentQ ++;
+      renderQuestion();
+  })
 }
 
-
-
-
-
-/*let question = document.getElementById("text");
-let option1 = document.getElementById("option1");
-let option2 = document.getElementById("option2");
-let option3 = document.getElementById("option3");
-let option4 = document.getElementById("option4");
-
-
-
-
-firstQuestion()
-
-function firstQuestion()
-{
-  question.appendChild(document.createTextNode("Who had the high ground over Anakin?"));
-  option1.appendChild(document.createTextNode("Jar-Jar Binks"));
-  option2.appendChild(document.createTextNode("Shaquille O'Neal"));
-  option3.appendChild(document.createTextNode("Obi-Wan Kenobi"));
-  option4.appendChild(document.createTextNode("X-Wing @Aliciousness"));
-
- option1.addEventListener("click", function(){
-   
-  
-  secondQuestion();
- });
- 
- option2.addEventListener("click", function(){
-   
-  secondQuestion();
- });
-
- option3.addEventListener("click", function(){
-   
-  secondQuestion();
- });
-
- option4.addEventListener("click", function(){
-   
-  secondQuestion();
- });
-
-}
-
-function secondQuestion()
-{
-  question.appendChild(document.createTextNode("Who was born on the planet Titan?"));
-  option1.appendChild(document.createTextNode("Thanos"));
-  option2.appendChild(document.createTextNode("Jon Snow"));
-  option3.appendChild(document.createTextNode("Ned Flanders"));
-  option4.appendChild(document.createTextNode("Hercules"));
-
-  option1.addEventListener("click", function(){
-    
-    thirdQuestion();
-  });
-  
-  option2.addEventListener("click", function(){
-  
-    thirdQuestion();
-  });
- 
-  option3.addEventListener("click", function(){
-    
-    thirdQuestion();
-  });
- 
-  option4.addEventListener("click", function(){
-    
-    thirdQuestion();
-  });
-};
-
-function thirdQuestion(){
-  question.appendChild(document.createTextNode("Who's awesome?"));
-  option1.appendChild(document.createTextNode("not me"));
-  option2.appendChild(document.createTextNode("not you"));
-  option3.appendChild(document.createTextNode("not I"));
-  option4.appendChild(document.createTextNode("me"));
-
-  option1.addEventListener("click", function(){
-    
-  });
-  
-  option2.addEventListener("click", function(){
-    
-  });
- 
-  option3.addEventListener("click", function(){
-    
-  });
- 
-  option4.addEventListener("click", function(){
-    
-  });
-} */
-
-// display the questions on the screen   
+// next question still does not appear when clicking on any of the choices (solved)
+  //quiz now needs to keep track of scores
+// Timer works
+// Still need to keep track of score
