@@ -23,9 +23,93 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-// button variables
+//const before starting the function
 
-let question = document.getElementById("text");
+const question=document.getElementById("text");
+
+const choiceA= document.getElementById("option1");
+const choiceB= document.getElementById("option2");
+const choiceC= document.getElementById("option3");
+const choiceD= document.getElementById("option4");
+
+// create array for questions/choices/answers
+
+let questions = [
+  {
+    question: "Who had the high ground over Anakin?",
+    choiceA: "Jar-Jar Binks",
+    choiceB: "Shaquille O'Neal",
+    choiceC: "Obi-Wan Kenobi",
+    choiceD: "X-Wing @Aliciousness",
+    correct: "c"
+  },
+  {
+    question: "Who was born on the planet Titan?",
+    choiceA: "Thanos",
+    choiceB: "Jon Snow",
+    choiceC: "Ned Flanders",
+    choiceD: "Hercules",
+    correct: "a"
+  },
+  {
+    question: "Who's awesome?",
+    choiceA: "not me",
+    choiceB: "not you",
+    choiceC: "not I",
+    choiceD: "me",
+    correct: "d"
+  }
+]
+
+
+// variables before rendering questions
+
+const lastQIndex = questions.length - 1;
+let currentQ = 0;
+let score = 0;
+
+//function for rendering questions
+function renderQuestion()
+{
+  let q = questions[currentQ];
+  question.innerHTML = "<h1>" + q.question + "</h1>";
+  choiceA.innerHTML = "<button>" + q.choiceA + "</button>";
+  choiceB.innerHTML = "<button>" + q.choiceB + "</button>";
+  choiceC.innerHTML = "<button>" + q.choiceC + "</button>";
+  choiceD.innerHTML = "<button>" + q.choiceD + "</button>";
+
+  /*if (currentQ < lastQIndex)
+  {
+    currentQ++;
+    renderQuestion();
+  }*/
+  check();
+}
+
+renderQuestion();
+
+function check(answer){
+  if(answer == questions[currentQ].correct)
+  {
+    score=score + 5;
+  }
+
+  else
+  {
+    score = 0;
+  }
+  if (currentQ < lastQIndex)
+  {
+    currentQ++;
+    renderQuestion();
+  }
+}
+
+
+
+
+
+/*let question = document.getElementById("text");
 let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
 let option3 = document.getElementById("option3");
@@ -66,7 +150,6 @@ function firstQuestion()
  });
 
 }
-
 
 function secondQuestion()
 {
@@ -119,16 +202,6 @@ function thirdQuestion(){
   option4.addEventListener("click", function(){
     
   });
-} 
-
-    //},
-    //{
-     //   question: "Who's awesome?",
-      //  choices: {
-       //     a: "not me", b: "not you", c: "not I", d: "me"},
-       // correctAnswer: ("d")
-   // }
- // ]
-    
+} */
 
 // display the questions on the screen   
