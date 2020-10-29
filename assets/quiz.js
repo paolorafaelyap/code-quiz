@@ -91,28 +91,51 @@ function nextQuestion(){
   {
       currentQ ++;
       renderQuestion();
+      if(currentQ == lastQIndex)
+      {
+        prompt("Enter initials here: ")
+      }
   })
 
   choiceB.addEventListener("click", function()
   {
       currentQ ++;
       renderQuestion();
+      if(currentQ == lastQIndex)
+      {
+        prompt("Enter initials here: ")
+      }
   })
   
   choiceC.addEventListener("click", function()
   {
       currentQ ++;
       renderQuestion();
+      if(currentQ == lastQIndex)
+      {
+        prompt("Enter initials here: ")
+      }
   })
 
   choiceD.addEventListener("click", function()
   {
       currentQ ++;
       renderQuestion();
+      if(currentQ == lastQIndex)
+      {
+        prompt("Enter initials here: ")
+      }
   })
+
+}
+
+function keepScore(){
+  // if choice is correct, add 5 points
+  // else, points are zero
 }
 
 // next question still does not appear when clicking on any of the choices (solved)
   //quiz now needs to keep track of scores
+// prompt pops up before last question is answered.  
 // Timer works
 // Still need to keep track of score
