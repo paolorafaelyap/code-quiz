@@ -91,40 +91,26 @@ function nextQuestion(){
   {
       currentQ ++;
       renderQuestion();
-      if(currentQ == lastQIndex)
-      {
-        prompt("Enter initials here: ")
-      }
+
   })
 
   choiceB.addEventListener("click", function()
   {
       currentQ ++;
       renderQuestion();
-      if(currentQ == lastQIndex)
-      {
-        prompt("Enter initials here: ")
-      }
+
   })
   
   choiceC.addEventListener("click", function()
   {
       currentQ ++;
       renderQuestion();
-      if(currentQ == lastQIndex)
-      {
-        prompt("Enter initials here: ")
-      }
   })
 
   choiceD.addEventListener("click", function()
   {
       currentQ ++;
       renderQuestion();
-      if(currentQ == lastQIndex)
-      {
-        prompt("Enter initials here: ")
-      }
   })
 
 }
